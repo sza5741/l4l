@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Gift For Lutfi sayanggg dariii lalaa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+        }
+        .font-serif-custom { font-family: 'Dancing Script', cursive; }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gift-box {
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        .gift-box:hover {
+            transform: scale(1.05) rotateY(10deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+
+    <!-- Header & Audio -->
+    <header class="text-center py-10 px-4">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-pink-500 mb-2 font-serif-custom">Untuk Lutfi ❤️</h1>
+        <p class="text-slate-400 text-sm md:text-base">Dari Lala, yang selalu memikirkanmu dari Semarang</p>
+        
+        <div class="mt-6 flex justify-center items-center gap-4">
+            <button onclick="toggleMusic()" id="musicBtn" class="bg-pink-600 hover:bg-pink-500 text-white px-5 py-2 rounded-full font-medium transition flex items-center gap-2 shadow-lg shadow-pink-500/30">
+                <i class="fas fa-music"></i> <span>Putar: Can't Help Falling in Love 🎶</span>
+            </button>
+            <!-- Audio Elvis Presley -->
+            <audio id="bgMusic" loop src="https://archive.org/download/elvis-presley.-elvis-75-good-rockin-tonight/Elvis%20Presley.53.Can%27t%20Help%20Falling%20In%20Love%20%281961%29.Elvis%2075-%20Good%20Rockin%27%20Tonight%20%5BDisc%202%5D%20%282009%29.mp3"></audio>
+        </div>
+    </header>
+
+    <div class="max-w-4xl mx-auto px-4 space-y-8">
+
+        <!-- Info LDR Jarak -->
+        <div class="glass rounded-2xl p-6 text-center shadow-xl">
+            <div class="flex flex-col md:flex-row justify-around items-center gap-4">
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-widest">Kamu Di</p>
+                    <p class="text-xl font-bold text-pink-400">Kabupaten Nabire 📍</p>
+                </div>
+                <div class="flex items-center gap-2 text-slate-500">
+                    <span class="h-0.5 w-12 bg-slate-700"></span>
+                    <i class="fas fa-plane text-pink-500 text-xl animate-pulse"></i>
+                    <span class="h-0.5 w-12 bg-slate-700"></span>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-widest">Aku Di</p>
+                    <p class="text-xl font-bold text-pink-400">Semarang 📍</p>
+                </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800">
+                <p class="text-slate-300 text-sm">Terpisah jarak <span class="text-yellow-400 font-bold">~2.810 KM</span>, tapi langit dan doa kita selalu sama. 🌌</p>
+            </div>
+        </div>
+
+        <!-- Interactive Gift Unboxing -->
+        <div class="glass rounded-2xl p-8 text-center shadow-2xl relative overflow-hidden">
+            <h2 class="text-2xl font-bold text-pink-400 mb-4">Kado Spesial Buat Kamu 🎁</h2>
+            <p class="text-slate-300 text-sm mb-6">Klik kadonya buat buka isinya ya!</p>
+            
+            <div id="giftContainer" onclick="openGift()" class="cursor-pointer gift-box inline-block bg-gradient-to-tr from-pink-600 to-rose-400 p-8 rounded-2xl shadow-2xl border-2 border-pink-300/30 my-4">
+                <i id="giftIcon" class="fas fa-gift text-7xl text-white animate-bounce"></i>
+            </div>
+
+            <div id="giftMessage" class="hidden mt-6 p-6 bg-pink-950/40 border border-pink-500/30 rounded-xl text-pink-200 animate-fade-in">
+                <h3 class="text-2xl font-bold font-serif-custom text-pink-300 mb-2">loveuuuu alwayssss. today. tomorrow. forever. ❤️</h3>
+                <p class="text-sm text-slate-300">Gak ada hadiah yang lebih besar dari rasa sayang Lala buat Lutfi setiap harinya.</p>
+            </div>
+        </div>
+
+        <!-- Surat Cinta Virtual -->
+        <div class="glass rounded-2xl p-6 md:p-8 shadow-xl">
+            <h2 class="text-2xl font-bold text-pink-400 mb-6 text-center font-serif-custom text-3xl">Pesan Untuk Lutfi ✨</h2>
+            <div class="text-slate-300 text-sm leading-relaxed space-y-4 max-h-96 overflow-y-auto pr-2">
+                <p><strong>sayang,</strong></p>
+                <p>mungkin salah satu hal paling aneh dari mencintai seseorang adalah ketika hati sudah merasa begitu dekat, tetapi dunia masih menempatkan kita di dua tempat yang berbeda. aku bisa merindukanmu sedalam ini, bisa memikirkanmu di sela-sela hari, bisa merasa tenang hanya karena melihat namamu muncul di layar, tetapi tetap tidak bisa mengulurkan tangan dan menemukanmu di sana.</p>
+                <p>jarak membuat aku mengerti bahwa rindu bukan sekadar keinginan untuk bertemu. rindu adalah ketika ada begitu banyak hal yang ingin diceritakan, begitu banyak kejadian kecil yang ingin dibagikan, tetapi orang yang paling ingin kita ceritakan justru tidak sedang berada di samping kita.</p>
+                <p>ada begitu banyak momen sederhana yang sebenarnya ingin aku miliki bersamamu. berjalan tanpa tujuan, duduk bersebelahan sambil membicarakan hal-hal tidak penting, mendengar ceritamu secara langsung, melihat ekspresimu ketika tertawa, atau bahkan hanya diam dalam satu ruang yang sama. hal-hal kecil yang mungkin bagi orang lain tidak berarti apa-apa, tetapi bagiku kelak mungkin akan menjadi bagian paling berharga dari kita.</p>
+                <p>dan mungkin, untuk sekarang, kita memang harus mencintai dengan cara seperti ini.</p>
+                <p class="italic text-pink-300">melalui layar.<br>melalui suara.<br>melalui pesan-pesan yang dikirim ketika rindu sudah terlalu penuh untuk disimpan sendiri.<br>melalui kalimat "jaga diri" yang sebenarnya menyimpan begitu banyak rasa khawatir.<br>melalui "aku kangen" yang tidak pernah benar-benar mampu mewakili seberapa ingin kita bertemu.</p>
+                <p>aku tidak akan berbohong dan mengatakan bahwa jarak selalu mudah. ada malam-malam ketika aku berharap kamu berada lebih dekat. ada saat ketika aku ingin menjadi orang yang bisa langsung datang ketika kamu sedang tidak baik-baik saja. ingin memelukmu ketika kata-kata sudah tidak cukup. ingin menjadi tempatmu beristirahat tanpa harus terhalang ribuan pesan dan layar.</p>
+                <p>tetapi di antara semua hal yang tidak bisa kita lakukan sekarang, ada satu hal yang masih bisa kita lakukan: <strong>tetap memilih satu sama lain.</strong></p>
+                <p>dan bagiku, itu lebih berarti daripada sekadar jarak yang bisa dihitung dengan kilometer.</p>
+                <p>aku ingin kita menjadi dua manusia yang tidak hanya saling mencintai ketika keadaan mudah, tetapi juga saling menggenggam ketika keadaan mulai menguji. kalau nanti ada hari ketika kamu lelah, jangan pergi sendirian. kalau ada sesuatu yang mengganggu hatimu, jangan biarkan aku menebaknya sendiri. datanglah kepadaku, ceritakan semuanya. begitu juga jika suatu hari aku yang kehilangan arah, aku ingin kita saling mengingatkan bahwa kita pernah memilih untuk berjalan sejauh ini bersama.</p>
+                <p>karena aku tidak ingin cinta kita hanya menjadi sesuatu yang indah untuk dirasakan, tetapi juga sesuatu yang kita rawat.</p>
+                <p>sebab dari semua hal yang bisa diberikan jarak kepada kita, aku tidak ingin jarak mengambil satu hal yang paling berharga: keyakinan bahwa kita masih punya satu sama lain.</p>
+                <p>jadi, kalau suatu hari kamu merasa jauh dariku, ingatlah bahwa jauh bukan berarti hilang.</p>
+                <p>dan sampai hari itu tiba, mari tetap berjalan. pelan-pelan. tanpa harus sempurna. cukup dengan terus memilih satu sama lain.</p>
+                <p class="font-bold text-pink-400 text-right mt-6">- Dari Lala 🤍</p>
+            </div>
+        </div>
+
+        <!-- 3 Alasan Sayang -->
+        <div class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-pink-400 mb-4 text-center">Kenapa Lala Sayang Lutfi? 🤍</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-800/60 p-4 rounded-xl text-center border border-slate-700">
+                    <span class="text-3xl">🧘‍♂️</span>
+                    <p class="font-semibold text-pink-300 mt-2">amu nenangin bnht</p>
+                </div>
+                <div class="bg-slate-800/60 p-4 rounded-xl text-center border border-slate-700">
+                    <span class="text-3xl">😊</span>
+                    <p class="font-semibold text-pink-300 mt-2">bikin atuu bahagia</p>
+                </div>
+                <div class="bg-slate-800/60 p-4 rounded-xl text-center border border-slate-700">
+                    <span class="text-3xl">🤪</span>
+                    <p class="font-semibold text-pink-300 mt-2">amu Lucuuuu bngt xixixi</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kupon Cinta Virtual -->
+        <div class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-pink-400 mb-4 text-center">Kupon Virtual Boleh Diklaim Lutfi 🎟️</h2>
+            <div class="space-y-3">
+                <div class="flex justify-between items-center bg-slate-800/80 p-4 rounded-xl border border-pink-500/20">
+                    <div>
+                        <p class="font-bold text-slate-200">📞 Call / VC Kapan Aja</p>
+                        <p class="text-xs text-slate-400">Bisa dipakai saat kangen parah</p>
+                    </div>
+                    <button onclick="claimCoupon(this)" class="bg-pink-600 hover:bg-pink-500 text-white text-xs px-3 py-2 rounded-lg">Klaim</button>
+                </div>
+                <div class="flex justify-between items-center bg-slate-800/80 p-4 rounded-xl border border-pink-500/20">
+                    <div>
+                        <p class="font-bold text-slate-200">Peyuk Kapan Aja</p>
+                        <p class="text-xs text-slate-400">Berlaku pas ketemu nanti xixi!</p>
+                    </div>
+                    <button onclick="claimCoupon(this)" class="bg-pink-600 hover:bg-pink-500 text-white text-xs px-3 py-2 rounded-lg">Klaim</button>
+                </div>
+                <div class="flex justify-between items-center bg-slate-800/80 p-4 rounded-xl border border-pink-500/20">
+                    <div>
+                        <p class="font-bold text-slate-200">💖 Disayangi Selamanya</p>
+                        <p class="text-xs text-slate-400">Otomatis aktif selamanya</p>
+                    </div>
+                    <button onclick="claimCoupon(this)" class="bg-pink-600 hover:bg-pink-500 text-white text-xs px-3 py-2 rounded-lg">Klaim</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kuis Mini -->
+        <div class="glass rounded-2xl p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-pink-400 mb-4 text-center">Kuis Mini: Seberapa Tahu Lutfi Soal Lala? 🤔</h2>
+            
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div>
+                    <p class="text-sm font-semibold mb-2">1. Lala lebih suka apa?</p>
+                    <div class="flex gap-4">
+                        <button onclick="answerQuiz(1, 'A')" class="q1-btn flex-1 bg-slate-800 p-3 rounded-lg border border-slate-700 hover:bg-slate-700 text-sm">A. Matcha</button>
+                        <button onclick="answerQuiz(1, 'B')" class="q1-btn flex-1 bg-slate-800 p-3 rounded-lg border border-slate-700 hover:bg-slate-700 text-sm">B. Coffee</button>
+                    </div>
+                    <p id="q1-res" class="text-xs mt-2 hidden"></p>
+                </div>
+                <!-- Q2 -->
+                <div>
+                    <p class="text-sm font-semibold mb-2">2. Lala lebih suka mana?</p>
+                    <div class="flex gap-4">
+                        <button onclick="answerQuiz(2, 'A')" class="q2-btn flex-1 bg-slate-800 p-3 rounded-lg border border-slate-700 hover:bg-slate-700 text-sm">A. Gunung</button>
+                        <button onclick="answerQuiz(2, 'B')" class="q2-btn flex-1 bg-slate-800 p-3 rounded-lg border border-slate-700 hover:bg-slate-700 text-sm">B. Pantai</button>
+                    </div>
+                    <p id="q2-res" class="text-xs mt-2 hidden"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Music Player
+        function toggleMusic() {
+            const music = document.getElementById('bgMusic');
+            const btn = document.getElementById('musicBtn');
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = '<i class="fas fa-pause"></i> <span>Pause Lagu</span>';
+            } else {
+                music.pause();
+                btn.innerHTML = '<i class="fas fa-music"></i> <span>Putar: Can\'t Help Falling in Love 🎶</span>';
+            }
+        }
+
+        // Open Gift
+        function openGift() {
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            document.getElementById('giftIcon').className = 'fas fa-heart text-7xl text-pink-300 animate-pulse';
+            document.getElementById('giftMessage').classList.remove('hidden');
+        }
+
+        // Claim Coupon
+        function claimCoupon(btn) {
+            confetti({ particleCount: 50, spread: 50 });
+            btn.innerText = 'Sudah Diklaim! ❤️';
+            btn.classList.remove('bg-pink-600', 'hover:bg-pink-500');
+            btn.classList.add('bg-green-600', 'cursor-default');
+            btn.disabled = true;
+        }
+
+        // Quiz Logic
+        function answerQuiz(q, ans) {
+            if (q === 1) {
+                const res = document.getElementById('q1-res');
+                res.classList.remove('hidden');
+                if (ans === 'B') {
+                    res.innerText = "tull tull! lala suka Coffee ☕❤️";
+                    res.className = "text-xs mt-2 text-green-400 font-bold";
+                    confetti();
+                } else {
+                    res.innerText = "Tetot! salah, lala lebii sukaa Coffee 😄";
+                    res.className = "text-xs mt-2 text-rose-400 font-bold";
+                }
+            } else if (q === 2) {
+                const res = document.getElementById('q2-res');
+                res.classList.remove('hidden');
+                if (ans === 'A') {
+                    res.innerText = "tull tull! lala lebiiii sukaaaa Gunung ⛰️❤️";
+                    res.className = "text-xs mt-2 text-green-400 font-bold";
+                    confetti();
+                } else {
+                    res.innerText = "Tetot! salah, lala kan sukanyaa Gunung 😄";
+                    res.className = "text-xs mt-2 text-rose-400 font-bold";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
